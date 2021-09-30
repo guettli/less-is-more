@@ -18,3 +18,21 @@ for item in mylist:
     ... do something with item
 ```
 
+## Less Synonyms
+
+Old:
+```
+program_types = models.ManyToManyField(ProjectType, verbose_name=_('Project Types'))
+```
+
+Why two words: "program" and "project"?
+
+Less synonyms:
+```
+project_types = models.ManyToManyField(ProjectType, verbose_name=_('Project Types'))
+```
+
+
+
+
+
