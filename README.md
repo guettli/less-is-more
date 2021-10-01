@@ -53,6 +53,8 @@ Creating HTML is fun and easy. Browser support is great today and many people ca
 
 That's different if you want to create PDF.
 
+Creating one outupt format (HTML) is enough.
+
 Save time, money and energy and avoid creating PDF files.
 
 
