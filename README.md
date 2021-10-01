@@ -23,6 +23,8 @@ for item in mylist:
 
 ## Less Synonyms
 
+Avoid to use synonyms. Use well the same well defined terms again and again.
+
 Old:
 ```
 program_types = models.ManyToManyField(ProjectType, verbose_name=_('Project Types'))
