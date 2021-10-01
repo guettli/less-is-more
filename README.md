@@ -1,6 +1,9 @@
 # Less is more: How to reduce code size and make it easier to read.
 
-Some examples on how to simplify code.
+I am super lazy. You can't imagine how lazy I am. I am so lazy that I someimes
+work all day and all night, just to make a tiny thing simpler.
+
+Some examples on how to simplify software.
 
 ## An empty list is no special condition
 
@@ -32,6 +35,15 @@ Less synonyms:
 project_types = models.ManyToManyField(ProjectType, verbose_name=_('Project Types'))
 ```
 
+## Avoid I18N
+
+If your native language is not english, and you develop an application which
+will be usued solely by people of your mother tongue, and it is clear that in the near
+future no other language is required, then avoid I18N (internationalization).
+
+If needed you can refactor your code later and add other languages.
+
+First make your current customers happy. 
 
 
 
