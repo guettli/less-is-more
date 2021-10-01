@@ -47,6 +47,12 @@ If needed you can refactor your code later and add other languages.
 
 First make your current customers happy. 
 
+## Avoid PDF creation
 
+Creating HTML is fun and easy. Browser support is great today and many people can help, if you have a question.
+
+That's different if you want to create PDF.
+
+Save time, money and energy and avoid creating PDF files.
 
 
