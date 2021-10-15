@@ -58,3 +58,47 @@ Creating one output format (HTML) is enough.
 Save time, money and energy and avoid creating PDF files.
 
 
+## less code, easier to read
+
+Old code:
+```
+def get_foo_capacity_base(self, foo, estimated=False):
+    if self.from_date_year:
+        try:
+            current_foo_amount = get_current_foo_amount(foo, self.from_date_year, estimated)
+            capacity = FooCapacity.objects.get(foo=foo, year=self.from_date_year).capacity
+            return moneyfmt(capacity - current_foo_amount)
+        except FooCapacity.DoesNotExist:
+            return '<a href="{}?foo={}&year={}">Add</a>'.format(
+                reverse('admin:activity_FooCapacity_add'),
+                foo,
+                self.from_date_year)
+    else:
+        current_year = timezone.now().year
+        try:
+            current_foo_amount = get_current_foo_amount(foo, current_year, estimated)
+            capacity = FooCapacity.objects.get(foo=foo, year=current_year).capacity
+            return moneyfmt(capacity - current_foo_amount)
+        except FooCapacity.DoesNotExist:
+            return '<a href="{}?foo={}&year={}">Add</a>'.format(
+                reverse('admin:activity_FooCapacity_add'),
+                foo,
+                current_year)
+```
+
+New version:
+```
+def get_foo_capacity_base(self, foo, estimated=False):
+    year = self.from_date_year
+    if not year:
+        year = timezone.now().year
+    try:
+        current_foo_amount = get_current_foo_amount(foo, year, estimated)
+        capacity = FooCapacity.objects.get(foo=foo, year=year).capacity
+        return moneyfmt(capacity - current_foo_amount)
+    except FooCapacity.DoesNotExist:
+        return '<a href="{}?foo={}&year={}">Add</a>'.format(
+            reverse('admin:activity_FooCapacity_add'),
+            foo,
+            year)
+            ```
