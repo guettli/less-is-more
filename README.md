@@ -102,3 +102,31 @@ def get_foo_capacity_base(self, foo, estimated=False):
             foo,
             year)
             ```
+
+# "else" not needed
+
+Old:
+```
+def foo(...):
+    if bar == BAR_TYPE_X:
+        return ...
+    elif bar == BAR_TYPE_Y:
+        return ...
+    elif bar == BAR_TYPE_Z:
+        return ...
+    else:
+        return ...
+```
+
+"else" is not needed:
+Simpler:
+```
+def foo(...):
+    if bar == BAR_TYPE_X:
+        return ...
+    if bar == BAR_TYPE_Y:
+        return ...
+    if bar == BAR_TYPE_Z:
+        return ...
+    return ...
+```
