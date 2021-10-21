@@ -101,7 +101,7 @@ def get_foo_capacity_base(self, foo, estimated=False):
             reverse('admin:activity_FooCapacity_add'),
             foo,
             year)
-            ```
+```
 
 # "else" not needed
 
