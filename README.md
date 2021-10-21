@@ -118,8 +118,7 @@ def foo(...):
         return ...
 ```
 
-"else" is not needed:
-Simpler:
+"else" is not needed. Less is more:
 ```
 def foo(...):
     if bar == BAR_TYPE_X:
