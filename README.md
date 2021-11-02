@@ -129,3 +129,19 @@ def foo(...):
         return ...
     return ...
 ```
+
+# Avoid useless comments
+
+```
+# FOO_CHOICE_BAR
+# FOO_CHOICE_BLUE
+# FOO_CHOICE_BAZ
+if foo_type in [
+    constants.FOO_CHOICE_BAR,
+    constants.FOO_CHOICE_BLUE,
+    constants.FOO_CHOICE_BAZ,
+]:
+    do_something()
+```
+
+These three comments above the "if" are not needed. Less is more.
