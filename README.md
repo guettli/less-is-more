@@ -181,3 +181,19 @@ DATABASES = {
 I prefer this once, since it is conditionless. There is no fallback which gives you wrong values in the case that the system has missing env vars.
 
 If there are less ways to get config values, then the system is simpler and easier to handle.
+
+# Use extend() to add a list.
+
+Old:
+```
+valid_integers = [1, 2, 3]
+for my_int in config.get_valid_integers():
+    valid_integers.append(my_int)
+```
+
+New:
+```
+valid_integers = [1, 2, 3]
+valid_integers.extend(config.get_valid_integers())
+```
+
