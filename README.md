@@ -197,3 +197,15 @@ valid_integers = [1, 2, 3]
 valid_integers.extend(config.get_valid_integers())
 ```
 
+# Superfluous comment
+
+```
+    # pathlength checking protected field
+    path_length_checking_file = ProtectedPathlengthCheckingField(
+        max_length=100,
+        upload_to='pathlength/',
+        blank=True)
+        ```
+        
+The comment does not provide any value. It is not needed.
+
