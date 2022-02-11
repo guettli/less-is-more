@@ -222,7 +222,12 @@ def test_foo_form(client):
     assert ...
 ```
 
-I prefer this, because it is enough
+I prefer this, because it is enough. I think this makes reading the code easier.
+
+The pattern `response = client....()` is common. It is simpler, if you always call the
+response "response". You usualy work on one response after the other. You don't deal
+with two responses in parallel.
+
 ```
 def test_foo_form(client):
     response = client.get(reverse('foo_form'))
