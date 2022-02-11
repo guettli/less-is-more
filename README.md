@@ -209,3 +209,30 @@ valid_integers.extend(config.get_valid_integers())
         
 The comment does not provide any value. It is not needed.
 
+# "response" is enough.
+
+```
+def test_foo_form(client):
+    form_response = client.get(reverse('foo_form'))
+    assert ...
+    ....
+
+    profile_response = client.post(reverse('foo_form'), data)
+    assert ...
+```
+
+I prefer this, because it is enough
+```
+def test_foo_form(client):
+    response = client.get(reverse('foo_form'))
+    assert ...
+    ....
+
+    response = client.post(reverse('foo_form'), data)
+    assert ...
+```
+
+
+
+    
+    
