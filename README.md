@@ -241,4 +241,11 @@ def test_foo_form(client):
 
 
     
-    
+# Creating emails: html body is enough, plain-text not needed
+
+I think it is enough to send the text/html without a text/plain alternative.
+
+Docs how to do this with Django are at the bottom of this part [Sending alternative content types](https://docs.djangoproject.com/en/4.0/topics/email/#sending-alternative-content-types)
+
+
+Today all mail clients show the html body of an email. 
